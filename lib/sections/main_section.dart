@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parth_prajapati_devfolio/animations/entrance_fader.dart';
 import 'package:parth_prajapati_devfolio/constants.dart';
+import 'package:parth_prajapati_devfolio/sections/home/home.dart';
 import 'package:parth_prajapati_devfolio/sections/navBar/nav_bar_logo.dart';
+import 'package:parth_prajapati_devfolio/widgets/arrow_on_top.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/rendering.dart';
 import 'package:parth_prajapati_devfolio/provider/theme_provider.dart';
@@ -59,10 +61,12 @@ class _MainSectionState extends State<MainSection> {
   }
 
   Widget sectionWidget(int i) {
-    return Container();
-    /* if (i == 0) {
+    if (i == 0) {
       return Home();
-    } else if (i == 1) {
+    } else {
+      return Container();
+    }
+    /*else if (i == 1) {
       return About();
     } else if (i == 2) {
       return Skills();
@@ -71,7 +75,7 @@ class _MainSectionState extends State<MainSection> {
     } else if (i == 4) {
       return Projects();
     } else if (i == 5){
-      return Achievements()
+      return Achievements();
     } else if (i == 6){
       return Contacts();
     } else if (i == 7) {
@@ -134,6 +138,25 @@ class _MainSectionState extends State<MainSection> {
       drawer: MediaQuery.of(context).size.width < 900
           ? _appBarMobile(_themeProv)
           : null,
+          body: Stack(
+        children: [
+          SectionsBody(
+            scrollController: _scrollController,
+            sectionsLength: _sectionsIcons.length,
+            sectionWidget: sectionWidget,
+          ),
+          _isScrollingDown
+              ? Positioned(
+                  bottom: 90,
+                  right: 0,
+                  child: EntranceFader(
+                      offset: const Offset(0, 20),
+                      child: ArrowOnTop(
+                        onPressed: () => _scroll(0),
+                      )))
+              : Container()
+        ],
+      ),
     );
   }
 
@@ -141,9 +164,9 @@ class _MainSectionState extends State<MainSection> {
       String childText, int index, IconData icon, ThemeProvider themeProvider) {
     return MediaQuery.of(context).size.width > 760
         ? EntranceFader(
-            offset: Offset(0, 0),
-            delay: Duration(milliseconds: 100),
-            duration: Duration(milliseconds: 250),
+            offset: const Offset(0, 0),
+            delay: const Duration(milliseconds: 100),
+            duration: const Duration(milliseconds: 250),
             child: Container(
               padding: const EdgeInsets.all(0.0),
               height: 60.0,
@@ -190,16 +213,16 @@ class _MainSectionState extends State<MainSection> {
       backgroundColor: _themeProv.lightTheme ? Colors.white : Colors.black,
       title: MediaQuery.of(context).size.width < 760
           ? EntranceFader(
-              duration: Duration(milliseconds: 250),
-              offset: Offset(0, -10),
-              delay: Duration(seconds: 3),
+              duration: const Duration(milliseconds: 250),
+              offset: const Offset(0, -10),
+              delay: const Duration(seconds: 3),
               child: NavBarLogo(
                 height: 20.0,
               ))
           : EntranceFader(
-              offset: Offset(0, -10),
-              duration: Duration(milliseconds: 250),
-              delay: Duration(milliseconds: 100),
+              offset: const Offset(0, -10),
+              duration: const Duration(milliseconds: 250),
+              delay: const Duration(milliseconds: 100),
               child: NavBarLogo(
                 height: MediaQuery.of(context).size.height * 0.035,
               ),
