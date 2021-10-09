@@ -31,6 +31,7 @@ ThemeProvider _themeProvider = ThemeProvider();
 
   @override
   Widget build(BuildContext context) {
+    print("main");
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
@@ -42,6 +43,7 @@ ThemeProvider _themeProvider = ThemeProvider();
         initialRoute: "/",
         routes: {
           "/": (context) => MainSection(),
+          "/#/": (context) => MainSection(),
         },
       ),
     );
