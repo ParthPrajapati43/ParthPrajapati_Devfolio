@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parth_prajapati_devfolio/animations/entrance_fader.dart';
 import 'package:parth_prajapati_devfolio/constants.dart';
+import 'package:parth_prajapati_devfolio/sections/about/about.dart';
 import 'package:parth_prajapati_devfolio/sections/home/home.dart';
 import 'package:parth_prajapati_devfolio/sections/navBar/nav_bar_logo.dart';
 import 'package:parth_prajapati_devfolio/widgets/arrow_on_top.dart';
@@ -63,12 +64,11 @@ class _MainSectionState extends State<MainSection> {
   Widget sectionWidget(int i) {
     if (i == 0) {
       return Home();
+    }  else if (i == 1) {
+      return About();
     } else {
       return Container();
-    }
-    /*else if (i == 1) {
-      return About();
-    } else if (i == 2) {
+    } /* else if (i == 2) {
       return Skills();
     } else if (i == 3) {
       return Experience();
@@ -162,7 +162,7 @@ class _MainSectionState extends State<MainSection> {
 
   Widget _appBarActions(
       String childText, int index, IconData icon, ThemeProvider themeProvider) {
-    return MediaQuery.of(context).size.width > 760
+    return MediaQuery.of(context).size.width > 900
         ? EntranceFader(
             offset: const Offset(0, 0),
             delay: const Duration(milliseconds: 100),
@@ -211,7 +211,7 @@ class _MainSectionState extends State<MainSection> {
     return AppBar(
       elevation: 0.0,
       backgroundColor: _themeProv.lightTheme ? Colors.white : Colors.black,
-      title: MediaQuery.of(context).size.width < 760
+      title: MediaQuery.of(context).size.width < 900
           ? EntranceFader(
               duration: const Duration(milliseconds: 250),
               offset: const Offset(0, -10),

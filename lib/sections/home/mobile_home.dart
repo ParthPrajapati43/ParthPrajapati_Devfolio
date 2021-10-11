@@ -63,7 +63,7 @@ class MobileHome extends StatelessWidget {
                     height: height * 0.01,
                   ),
                   Text(
-                    "Prajapati",
+                    "Parth",
                     style: GoogleFonts.montserrat(
                         fontSize: height * 0.055,
                         color: _themeProvider.lightTheme
@@ -73,7 +73,7 @@ class MobileHome extends StatelessWidget {
                         letterSpacing: 1.1),
                   ),
                   Text(
-                    "Parth",
+                    "Prajapati",
                     style: GoogleFonts.montserrat(
                         color: _themeProvider.lightTheme
                             ? Colors.black
@@ -133,7 +133,7 @@ class MobileHome extends StatelessWidget {
                           side: BorderSide(color: kPrimaryColor)),
                       onPressed: () {
                         html.window.open(
-                            'https://drive.google.com/file/d/1DkFKehU2wDUy-bySS8MN_ios2nl3XrEC/view?usp=sharing',
+                            kResumeLink,
                             "pdf");
                       },
                       child: Text(

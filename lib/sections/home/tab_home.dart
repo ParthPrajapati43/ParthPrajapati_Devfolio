@@ -77,7 +77,7 @@ class TabHome extends StatelessWidget {
                     height: height * 0.04,
                   ),
                   AdaptiveText(
-                    "Prajapati",
+                    "Parth",
                     style: GoogleFonts.montserrat(
                         fontSize:
                             width < 1200 ? height * 0.085 : height * 0.095,
@@ -88,7 +88,7 @@ class TabHome extends StatelessWidget {
                         letterSpacing: 4.0),
                   ),
                   AdaptiveText(
-                    "Parth",
+                    "Prajapati",
                     style: GoogleFonts.montserrat(
                         color: _themeProvider.lightTheme
                             ? Colors.black
@@ -158,7 +158,7 @@ class TabHome extends StatelessWidget {
                           side: BorderSide(color: kPrimaryColor)),
                       onPressed: () {
                         html.window.open(
-                            'https://drive.google.com/file/d/1DkFKehU2wDUy-bySS8MN_ios2nl3XrEC/view?usp=sharing',
+                            kResumeLink,
                             "pdf");
                       },
                       child: Text(
