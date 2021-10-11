@@ -4,6 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 // Colors
 final Color kPrimaryColor = Colors.green;
 
+// Resume Link
+const kResumeLink = "https://drive.google.com/file/d/1DkFKehU2wDUy-bySS8MN_ios2nl3XrEC/view?usp=sharing";
+
 // URL Launcher
 void launchURL(String _url) async =>
     await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
@@ -34,4 +37,14 @@ const kSocialLinks = [
   "https://stackoverflow.com/users/11665065/parth-prajapati",
   "https://www.instagram.com/parth.4399/",
   "https://www.facebook.com/profile.php?id=100009517429249"
+];
+
+// Qualities
+final kQualities = [
+  "Quick Learner",
+  "Curious & Passionate",
+  "Good communicator",
+  "Team Player",
+  "Flexible & Adaptable",
+  "Optimistic Thinker"
 ];

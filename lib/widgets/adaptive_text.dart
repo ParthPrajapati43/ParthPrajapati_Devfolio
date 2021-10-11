@@ -21,6 +21,7 @@ class AdaptiveText extends StatelessWidget {
             text,
             style: style,
             textAlign: textAlign,
+            overflow: TextOverflow.ellipsis,
           );
   }
 }
