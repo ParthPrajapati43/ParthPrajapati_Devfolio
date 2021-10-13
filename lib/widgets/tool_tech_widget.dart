@@ -11,6 +11,8 @@ class ToolTechWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _themeProvider = Provider.of<ThemeProvider>(context);
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12.0),
       child: Row(
@@ -25,6 +27,7 @@ class ToolTechWidget extends StatelessWidget {
             style: TextStyle(
               color:
                   _themeProvider.lightTheme ? Colors.grey[500] : Colors.white,
+              fontSize: width < 350 ? 12 : 15,
             ),
           )
         ],
