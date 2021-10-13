@@ -5,6 +5,7 @@ import 'package:parth_prajapati_devfolio/constants.dart';
 import 'package:parth_prajapati_devfolio/sections/about/about.dart';
 import 'package:parth_prajapati_devfolio/sections/home/home.dart';
 import 'package:parth_prajapati_devfolio/sections/navBar/nav_bar_logo.dart';
+import 'package:parth_prajapati_devfolio/sections/skills/skills.dart';
 import 'package:parth_prajapati_devfolio/widgets/arrow_on_top.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/rendering.dart';
@@ -52,7 +53,7 @@ class _MainSectionState extends State<MainSection> {
           : i == 1
               ? MediaQuery.of(context).size.height * 1.05
               : i == 2
-                  ? MediaQuery.of(context).size.height * 1.98
+                  ? MediaQuery.of(context).size.height * 2.45
                   : i == 3
                       ? MediaQuery.of(context).size.height * 2.9
                       : MediaQuery.of(context).size.height * 4,
@@ -66,11 +67,11 @@ class _MainSectionState extends State<MainSection> {
       return Home();
     }  else if (i == 1) {
       return About();
+    } else if (i == 2) {
+      return Skills();
     } else {
       return Container();
-    } /* else if (i == 2) {
-      return Skills();
-    } else if (i == 3) {
+    } /* else if (i == 3) {
       return Experience();
     } else if (i == 4) {
       return Projects();

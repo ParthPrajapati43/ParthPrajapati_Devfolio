@@ -90,20 +90,16 @@ class MobileAbout extends StatelessWidget {
           ),
           Column(
             children: [
-              for (int row = 0; row < ((kQualities.length + 2) / 3); ++row)
+              for (int row = 0; row < ((kQualities.length + 1) / 2); ++row)
                 Row(
                   children: [
-                    if (row * 3 + 0 < kQualities.length)
+                    if (row * 2 + 0 < kQualities.length)
                       ToolTechWidget(
-                        techName: kQualities[row * 3 + 0],
+                        techName: kQualities[row * 2 + 0],
                       ),
-                    if (row * 3 + 1 < kQualities.length)
+                    if (row * 2 + 1 < kQualities.length)
                       ToolTechWidget(
-                        techName: kQualities[row * 3 + 1],
-                      ),
-                    if (row * 3 + 2 < kQualities.length)
-                      ToolTechWidget(
-                        techName: kQualities[row * 3 + 2],
+                        techName: kQualities[row * 2 + 1],
                       ),
                   ],
                 ),

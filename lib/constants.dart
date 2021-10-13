@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:dev_icons/dev_icons.dart';
 
 // Colors
 final Color kPrimaryColor = Colors.green;
@@ -40,7 +41,7 @@ const kSocialLinks = [
 ];
 
 // Qualities
-final kQualities = [
+const kQualities = [
   "Quick Learner",
   "Curious & Passionate",
   "Good communicator",
@@ -48,3 +49,80 @@ final kQualities = [
   "Flexible & Adaptable",
   "Optimistic Thinker"
 ];
+
+// skills
+/* class Skills {
+  IconData skillIcon;
+  String skillText;
+  int skillRating;
+
+  Skills({this.skillIcon, this.skillText, this.skillRating});
+} */
+
+const List<IconData> kSoftwareDevelopmentIcons = [
+  DevIcons.cPlain,
+  DevIcons.cplusplusPlain,
+  DevIcons.pythonPlain,
+  DevIcons.javaPlain,
+  DevIcons.dartPlain,
+  DevIcons.mysqlPlain,
+];
+
+const kSoftwareDevelopmentTexts = [
+  "C Language",
+  "C++ Language",
+  "Python",
+  "Java",
+  "Dart",
+  "My SQL",
+];
+
+const kSoftwareDevelopmentRatings = [4, 4, 4, 3, 4, 4];
+
+const List<IconData> kWebAppDevelopmentIcons = [
+  DevIcons.html5Plain,
+  DevIcons.css3Plain,
+  DevIcons.javascriptPlain,
+  DevIcons.nodejsPlain,
+  DevIcons.expressOriginal,
+  DevIcons.reactOriginal,
+  DevIcons.mongodbPlain,
+  DevIcons.reduxOriginal,
+  DevIcons.flutterPlain,
+  DevIcons.firebasePlain,
+  DevIcons.materialuiPlain,
+  DevIcons.bootstrapPlain,
+  DevIcons.herokuPlain,
+];
+
+const kWebAppDevelopmentTexts = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "Node Js",
+  "Express Js",
+  "React Js",
+  "Mongo DB",
+  "Redux",
+  "Flutter",
+  "Firebase",
+  "Material UI",
+  "Bootstrap",
+  "Heroku",
+];
+
+const kWebAppDevelopmentRatings = [4, 4, 4, 4, 4, 4, 4, 3, 4, 3, 5, 5, 3];
+
+const List<IconData> kVersionControlIcons = [
+  DevIcons.gitPlain,
+  DevIcons.githubOriginal,
+  DevIcons.bitbucketOriginal
+];
+
+const kVersionControlTexts = [
+  "Git",
+  "GitHub",
+  "BitBucket"
+];
+
+const kVersionControlRatings = [4, 4, 3];
