@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'package:parth_prajapati_devfolio/sections/home/desktop_home.dart';
 import 'package:parth_prajapati_devfolio/sections/home/mobile_home.dart';

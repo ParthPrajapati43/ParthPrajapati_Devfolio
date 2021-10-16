@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'package:parth_prajapati_devfolio/sections/about/desktop_about.dart';
 import 'package:parth_prajapati_devfolio/sections/about/mobile_about.dart';
