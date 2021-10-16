@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'package:parth_prajapati_devfolio/sections/skills/desktop_skills.dart';
 import 'package:parth_prajapati_devfolio/sections/skills/mobile_skills.dart';
